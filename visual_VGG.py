@@ -51,10 +51,10 @@ def visualize_feature_map(img_batch):
 
 
 if __name__ == "__main__":
-    img_path = './001.png'
-    weights_path = '../model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5'
+    img_path = './009.png'
+    weight_path = "./model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5"
     # base_model = VGG19("G:heaodi/PythonCode/CNNVisual/model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5", include_top=False)
-    base_model = VGG19(weights_path, include_top=False)         # VGG net
+    base_model = VGG19(weights=weight_path, include_top=False)         # VGG net
     model = Model(inputs=base_model.input, outputs=base_model.get_layer('block1_pool').output)
     # model = Model(inputs=base_model.input, outputs=base_model.get_layer('block2_pool').output)
     # model = Model(inputs=base_model.input, outputs=base_model.get_layer('block3_pool').output)
